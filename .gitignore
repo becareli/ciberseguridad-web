@@ -1,0 +1,7 @@
+# ------------------------------------
+# 5. Archivos de Ciberseguridad/Temporales
+# ------------------------------------
+/reports/      # Si generas reportes de escaneo aquí
+*.tmp
+*.bak
+*.old

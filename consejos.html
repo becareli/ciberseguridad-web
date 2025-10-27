@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consejos prácticos para proteger tu seguridad digital">
+    
+    <title>Consejos de Seguridad - CiberSeguridad</title>
+    
+    <!-- ENLACES A LIBRERÍAS EXTERNAS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <!-- ========================================
+         BARRA DE NAVEGACIÓN
+         ======================================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-shield-alt"></i> CiberSeguridad
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-home"></i> Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="amenazas.html">
+                            <i class="fas fa-exclamation-triangle"></i> Amenazas
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="consejos.html">
+                            <i class="fas fa-lightbulb"></i> Consejos
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================
+         ENCABEZADO DE LA PÁGINA
+         ======================================== -->
+    <section class="page-header bg-success text-white">
+        <div class="container">
+            <div class="row align-items-center py-5">
+                <div class="col-md-8">
+                    <h1 class="display-4 fw-bold">
+                        <i class="fas fa-lightbulb"></i> Consejos de Seguridad
+                    </h1>
+                    <p class="lead">
+                        Aprende las mejores prácticas para protegerte en el mundo digital.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SECCIÓN: BUENAS PRÁCTICAS (ACORDEÓN)
+         Usa Bootstrap Accordion para mostrar/ocultar información
+         ======================================== -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 display-5">
+                <i class="fas fa-check-circle text-success"></i> Buenas Prácticas Esenciales
+            </h2>
+
+            <!-- ACORDEÓN BOOTSTRAP -->
+            <div class="accordion" id="accordionConsejos">
+                
+                <!-- PRÁCTICA 1: CONTRASEÑAS -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <!-- El botón que despliega/contrae la información -->
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            <i class="fas fa-key text-primary me-3"></i>
+                            <strong>1. Usa Contraseñas Fuertes y Únicas</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionConsejos">
+                        <div class="accordion-body">
+                            <p><strong>¿Por qué es importante?</strong> Una contraseña débil es como dejar la puerta de tu casa abierta.</p>
+                            <ul>
+                                <li>✅ Usa <strong>al menos 12 caracteres</strong></li>
+                                <li>✅ Combina mayúsculas, minúsculas, números y símbolos</li>
+                                <li>✅ NO uses información personal (nombres, fechas de nacimiento)</li>
+                                <li>✅ Usa un administrador de contraseñas (LastPass, 1Password, Bitwarden)</li>
+                                <li>✅ Cambia contraseñas comprometidas inmediatamente</li>
+                            </ul>
+                            <div class="alert alert-info mt-3">
+                                <strong>Ejemplo de contraseña fuerte:</strong> <code>Arq!2025#DiSeñ0$C@sa</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRÁCTICA 2: AUTENTICACIÓN DE DOS FACTORES -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            <i class="fas fa-mobile-alt text-success me-3"></i>
+                            <strong>2. Activa la Autenticación de Dos Factores (2FA)</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionConsejos">
+                        <div class="accordion-body">
+                            <p><strong>¿Qué es?</strong> Una capa extra de seguridad que requiere dos formas de verificación.</p>
+                            <p><strong>Tipos de 2FA:</strong></p>
+                            <ul>
+                                <li>📱 <strong>SMS:</strong> Código enviado a tu teléfono (básico)</li>
+                                <li>🔑 <strong>App Authenticator:</strong> Google Authenticator, Microsoft Authenticator (recomendado)</li>
+                                <li>🔐 <strong>Llave de seguridad física:</strong> YubiKey (máxima seguridad)</li>
+                            </ul>
+                            <div class="alert alert-warning mt-3">
+                                <i class="fas fa-exclamation-triangle"></i> 
+                                Con 2FA activado, incluso si roban tu contraseña, no podrán acceder sin el segundo factor.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRÁCTICA 3: ACTUALIZACIONES -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            <i class="fas fa-sync-alt text-warning me-3"></i>
+                            <strong>3. Mantén tu Software Actualizado</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionConsejos">
+                        <div class="accordion-body">
+                            <p><strong>¿Por qué actualizar?</strong> Los hackers explotan vulnerabilidades en software desactualizado.</p>
+                            <p><strong>Qué actualizar:</strong></p>
+                            <ul>
+                                <li>💻 Sistema operativo (Windows, macOS, Linux)</li>
+                                <li>🌐 Navegadores web (Chrome, Firefox, Safari)</li>
+                                <li>📱 Aplicaciones móviles</li>
+                                <li>🔌 Plugins y extensiones</li>
+                                <li>🛡️ Antivirus y software de seguridad</li>
+                            </ul>
+                            <div class="alert alert-success mt-3">
+                                <strong>Tip:</strong> Activa las actualizaciones automáticas cuando sea posible.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRÁCTICA 4: COPIAS DE SEGURIDAD -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                            <i class="fas fa-hdd text-info me-3"></i>
+                            <strong>4. Realiza Copias de Seguridad Regularmente</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionConsejos">
+                        <div class="accordion-body">
+                            <p><strong>Regla 3-2-1:</strong></p>
+                            <ul>
+                                <li><strong>3</strong> copias de tus datos (original + 2 copias)</li>
+                                <li><strong>2</strong> tipos diferentes de almacenamiento (disco duro + nube)</li>
+                                <li><strong>1</strong> copia fuera del sitio (en la nube o lugar físico diferente)</li>
+                            </ul>
+                            <p><strong>Opciones de respaldo:</strong></p>
+                            <ul>
+                                <li>☁️ Nube: Google Drive, Dropbox, OneDrive, iCloud</li>
+                                <li>💾 Disco externo: Western Digital, Seagate</li>
+                                <li>📦 NAS: Synology, QNAP (para usuarios avanzados)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRÁCTICA 5: REDES WIFI -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                            <i class="fas fa-wifi text-danger me-3"></i>
+                            <strong>5. Ten Cuidado con las Redes WiFi Públicas</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionConsejos">
+                        <div class="accordion-body">
+                            <p><strong>Riesgos:</strong> Los atacantes pueden interceptar tu información en redes no seguras.</p>
+                            <p><strong>Consejos:</strong></p>
+                            <ul>
+                                <li>🚫 NO accedas a banca online en WiFi público</li>
+                                <li>🔒 Usa una VPN (Red Privada Virtual) para cifrar tu conexión</li>
+                                <li>📴 Desactiva el WiFi y Bluetooth cuando no los uses</li>
+                                <li>🔍 Verifica el nombre exacto de la red con el establecimiento</li>
+                                <li>⚠️ Evita redes sin contraseña</li>
+                            </ul>
+                            <div class="alert alert-info mt-3">
+                                <strong>VPN recomendadas:</strong> NordVPN, ExpressVPN, ProtonVPN (tiene versión gratuita)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRÁCTICA 6: CORREOS SOSPECHOSOS -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                            <i class="fas fa-envelope text-danger me-3"></i>
+                            <strong>6. Desconfía de Correos y Enlaces Sospechosos</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionConsejos">
+                        <div class="accordion-body">
+                            <p><strong>Antes de hacer clic, pregúntate:</strong></p>
+                            <ul>
+                                <li>❓ ¿Esperaba este correo?</li>
+                                <li>❓ ¿Conozco al remitente?</li>
+                                <li>❓ ¿La dirección de correo es legítima?</li>
+                                <li>❓ ¿Hay errores ortográficos o gramática extraña?</li>
+                                <li>❓ ¿Me piden información personal o financiera?</li>
+                            </ul>
+                            <div class="alert alert-danger mt-3">
+                                <strong>¡NUNCA!</strong> Descargues archivos adjuntos de remitentes desconocidos, especialmente .exe, .zip, .rar
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SECCIÓN: TEST DE SEGURIDAD
+         Modal interactivo con preguntas
+         ======================================== -->
+    <section class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="display-5 mb-3">
+                <i class="fas fa-clipboard-check text-primary"></i> ¿Qué tan seguro estás?
+            </h2>
+            <p class="lead mb-4">Realiza nuestro test rápido de seguridad y descubre tu nivel de protección.</p>
+            
+            <!-- BOTÓN QUE ABRE EL MODAL DEL TEST -->
+            <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#testModal">
+                <i class="fas fa-play-circle"></i> Iniciar Test de Seguridad
+            </button>
+        </div>
+    </section>
+
+    <!-- ========================================
+         MODAL: TEST DE SEGURIDAD
+         Aquí el usuario responde preguntas
+         ======================================== -->
+    <div class="modal fade" id="testModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">
+                        <i class="fas fa-clipboard-check"></i> Test de Seguridad Digital
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- FORMULARIO DEL TEST -->
+                    <form id="testForm">
+                        
+                        <!-- PREGUNTA 1 -->
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">1. ¿Usas la misma contraseña en varios sitios web?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="pregunta1" value="0" id="p1a">
+                                <label class="form-check-label" for="p1a">Sí, uso la misma en todos lados</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="pregunta1" value="5" id="p1b">
+                                <label class="form-check-label" for="p1b">A veces repito algunas</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="pregunta1" value="10" id="p1c">
+                                <label class="form-check-label" for="p1c">No, cada sitio tiene una contraseña única</label>
+                            </div>
+                        </div>
+
+                        <!-- PREGUNTA 2 -->
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">2. ¿Tienes activada la autenticación de dos factores (2FA)?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="pregunta2" value="0" id="p2a">
+                                <label class="form-check-label" for="p2a">No sé qué es eso</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="pregunta2" value="5" id="p2b">
+                                <label class="form-check-label" for="p2b">Solo en algunos sitios importantes</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="pregunta2" value="10" id="p2c">
+                                <label class="form-check-label" for="p2c">Sí, en todas mis cuentas importantes</label>
+                            </div>
+                        </div>
+
+                        <!-- PREGUNTA 3 -->
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">3. ¿Con qué frecuencia actualizas tu software?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="pregunta3" value="0" id="p3a">
+                                <label class="form-check-label" for="p3a">Casi nunca, solo cuando falla algo</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="pregunta3" value="5" id="p3b">
+                                <label class="form-check-label" for="p3b">De vez en cuando</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="pregunta3" value="10" id="p3c">
+                                <label class="form-check-label" for="p3c">Siempre actualizo cuando hay una nueva versión</label>
+                            </div>
+                        </div>
+
+                        <!-- PREGUNTA 4 -->
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">4. ¿Haces copias de seguridad de tus archivos importantes?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="pregunta4" value="0" id="p4a">
+                                <label class="form-check-label" for="p4a">No, nunca</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="pregunta4" value="5" id="p4b">
+                                <label class="form-check-label" for="p4b">Solo algunos archivos, a veces</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="pregunta4" value="10" id="p4c">
+                                <label class="form-check-label" for="p4c">Sí, regularmente y en múltiples ubicaciones</label>
+                            </div>
+                        </div>
+
+                        <!-- PREGUNTA 5 -->
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">5. ¿Cómo te comportas con enlaces en correos electrónicos?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="pregunta5" value="0" id="p5a">
+                                <label class="form-check-label" for="p5a">Hago clic sin pensarlo mucho</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="pregunta5" value="5" id="p5b">
+                                <label class="form-check-label" for="p5b">A veces verifico, pero no siempre</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="pregunta5" value="10" id="p5c">
+                                <label class="form-check-label" for="p5c">Siempre verifico el remitente y paso el mouse sobre el enlace antes de hacer clic</label>
+                            </div>
+                        </div>
+
+                        <!-- BOTÓN PARA CALCULAR RESULTADO -->
+                        <button type="submit" class="btn btn-success w-100 btn-lg">
+                            <i class="fas fa-calculator"></i> Ver mi Puntuación
+                        </button>
+                    </form>
+
+                    <!-- ÁREA DONDE SE MUESTRA EL RESULTADO (inicialmente oculta) -->
+                    <div id="resultadoTest" class="mt-4" style="display: none;">
+                        <hr>
+                        <h4 class="text-center mb-3">Tu Resultado:</h4>
+                        <div id="resultadoContenido"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================
+         SECCIÓN: FORMULARIO DE CONTACTO
+         Para solicitar más información
+         ======================================== -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card shadow-lg">
+                        <div class="card-header bg-success text-white text-center">
+                            <h3 class="mb-0">
+                                <i class="fas fa-envelope"></i> ¿Necesitas Más Información?
+                            </h3>
+                        </div>
+                        <div class="card-body p-4">
+                            <p class="text-center mb-4">
+                                Si tienes preguntas sobre ciberseguridad o necesitas asesoría personalizada, 
+                                completa el formulario y nos pondremos en contacto contigo.
+                            </p>
+
+                            <!-- FORMULARIO DE CONTACTO -->
+                            <form id="contactForm">
+                                <div class="row">
+                                    <!-- NOMBRE -->
+                                    <div class="col-md-6 mb-3">
+                                        <label for="nombre" class="form-label">Nombre Completo *</label>
+                                        <input type="text" class="form-control" id="nombre" required>
+                                        <div class="invalid-feedback">Por favor ingresa tu nombre</div>
+                                    </div>
+
+                                    <!-- EMAIL -->
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label">Correo Electrónico *</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                        <div class="invalid-feedback">Por favor ingresa un email válido</div>
+                                    </div>
+                                </div>
+
+                                <!-- TELÉFONO -->
+                                <div class="mb-3">
+                                    <label for="telefono" class="form-label">Teléfono</label>
+                                    <input type="tel" class="form-control" id="telefono" placeholder="+56 9 1234 5678">
+                                </div>
+
+                                <!-- TEMA -->
+                                <div class="mb-3">
+                                    <label for="tema" class="form-label">Tema de Consulta *</label>
+                                    <select class="form-select" id="tema" required>
+                                        <option value="">Selecciona un tema...</option>
+                                        <option value="general">Consulta General</option>
+                                        <option value="phishing">Posible Ataque de Phishing</option>
+                                        <option value="ransomware">Problemas con Ransomware</option>
+                                        <option value="proteccion">Asesoría de Protección</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                    <div class="invalid-feedback">Por favor selecciona un tema</div>
+                                </div>
+
+                                <!-- MENSAJE -->
+                                <div class="mb-3">
+                                    <label for="mensaje" class="form-label">Mensaje *</label>
+                                    <textarea class="form-control" id="mensaje" rows="5" required 
+                                              placeholder="Describe tu consulta o problema..."></textarea>
+                                    <div class="invalid-feedback">Por favor escribe tu mensaje</div>
+                                </div>
+
+                                <!-- CHECKBOX DE TÉRMINOS -->
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="terminos" required>
+                                    <label class="form-check-label" for="terminos">
+                                        Acepto los términos y condiciones y la política de privacidad *
+                                    </label>
+                                    <div class="invalid-feedback">Debes aceptar los términos</div>
+                                </div>
+
+                                <!-- BOTÓN DE ENVÍO -->
+                                <button type="submit" class="btn btn-success w-100 btn-lg">
+                                    <i class="fas fa-paper-plane"></i> Enviar Consulta
+                                </button>
+                            </form>
+
+                            <!-- MENSAJE DE ÉXITO (inicialmente oculto) -->
+                            <div id="mensajeExito" class="alert alert-success mt-4" style="display: none;">
+                                <i class="fas fa-check-circle"></i> 
+                                <strong>¡Mensaje enviado exitosamente!</strong> 
+                                Nos pondremos en contacto contigo pronto.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER
+         ======================================== -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-2">
+                <i class="fas fa-shield-alt"></i> 
+                <strong>Creado por Patricio Becar Elissegaray</strong> - Educación para un mundo digital seguro
+            </p>
+            <p class="text-muted mb-0">
+                Proyecto educativo - BootCamp Python | Módulo 2
+            </p>
+        </div>
+    </footer>
+
+    <!-- ========================================
+         SCRIPTS DE JAVASCRIPT
+         ======================================== -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

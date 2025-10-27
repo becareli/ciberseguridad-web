@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- METADATOS: Información sobre la página -->
+    <meta charset="UTF-8"> <!-- Codificación de caracteres (incluye ñ, acentos, etc) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la página sea responsiva en móviles -->
+    <meta name="description" content="Aprende sobre ciberseguridad: conceptos, amenazas y consejos de protección">
+    
+    <title>CiberSeguridad - Inicio</title>
+    
+    <!-- BOOTSTRAP: Framework CSS para diseño responsivo -->
+    <!-- Lo cargamos desde un CDN (Content Delivery Network) - servidor externo -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FONT AWESOME: Librería de iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS PERSONALIZADO: Nuestros estilos propios -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <!-- ========================================
+         BARRA DE NAVEGACIÓN (NAVBAR)
+         Igual que el "header" de un plano arquitectónico
+         ======================================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <!-- LOGO/MARCA -->
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-shield-alt"></i> CiberSeguridad
+            </a>
+            
+            <!-- BOTÓN HAMBURGUESA para móviles -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- MENÚ DE NAVEGACIÓN -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">
+                            <i class="fas fa-home"></i> Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="amenazas.html">
+                            <i class="fas fa-exclamation-triangle"></i> Amenazas
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="consejos.html">
+                            <i class="fas fa-lightbulb"></i> Consejos
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================
+         SECCIÓN HERO (IMAGEN DESTACADA)
+         Como la fachada principal de una casa
+         ======================================== -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6 text-white">
+                    <!-- TÍTULO PRINCIPAL -->
+                    <h1 class="display-3 fw-bold mb-4 animate-fade-in">
+                        Protege tu Mundo Digital
+                    </h1>
+                    <p class="lead mb-4">
+                        La ciberseguridad no es opcional, es esencial. Aprende a proteger tu información,
+                        tu privacidad y tu identidad en el mundo digital.
+                    </p>
+                    <!-- BOTONES DE ACCIÓN -->
+                    <div class="d-flex gap-3">
+                        <a href="amenazas.html" class="btn btn-danger btn-lg">
+                            <i class="fas fa-exclamation-triangle"></i> Ver Amenazas
+                        </a>
+                        <a href="consejos.html" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-shield-alt"></i> Protégete Ahora
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <!-- IMAGEN ILUSTRATIVA -->
+                    <i class="fas fa-lock display-1 text-white mb-4" style="font-size: 15rem;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SECCIÓN: ¿QUÉ ES LA CIBERSEGURIDAD?
+         Contenido informativo principal
+         ======================================== -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-4 fw-bold mb-3">¿Qué es la Ciberseguridad?</h2>
+                    <p class="lead text-muted">
+                        La ciberseguridad es la práctica de proteger sistemas, redes y programas de ataques digitales.
+                    </p>
+                </div>
+            </div>
+
+            <!-- TARJETAS CON CONCEPTOS CLAVE -->
+            <div class="row g-4">
+                <!-- TARJETA 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm hover-card">
+                        <div class="card-body text-center">
+                            <div class="icon-box mb-3">
+                                <i class="fas fa-user-shield fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="card-title">Protección de Datos</h4>
+                            <p class="card-text">
+                                Salvaguarda información personal y confidencial contra accesos no autorizados,
+                                robos o pérdidas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TARJETA 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm hover-card">
+                        <div class="card-body text-center">
+                            <div class="icon-box mb-3">
+                                <i class="fas fa-network-wired fa-3x text-success"></i>
+                            </div>
+                            <h4 class="card-title">Seguridad de Redes</h4>
+                            <p class="card-text">
+                                Protege la integridad de las redes y los datos en tránsito mediante
+                                medidas de seguridad avanzadas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TARJETA 3 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm hover-card">
+                        <div class="card-body text-center">
+                            <div class="icon-box mb-3">
+                                <i class="fas fa-brain fa-3x text-warning"></i>
+                            </div>
+                            <h4 class="card-title">Conciencia Digital</h4>
+                            <p class="card-text">
+                                Educación y entrenamiento para reconocer amenazas y aplicar
+                                buenas prácticas de seguridad.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SECCIÓN: ESTADÍSTICAS
+         Datos impactantes sobre ciberseguridad
+         ======================================== -->
+    <section class="py-5 bg-dark text-white">
+        <div class="container">
+            <h2 class="text-center mb-5 display-5">La Realidad de las Ciber-Amenazas</h2>
+            <div class="row text-center">
+                <!-- ESTADÍSTICA 1 -->
+                <div class="col-md-3">
+                    <div class="stat-box">
+                        <h3 class="display-4 fw-bold text-danger">43%</h3>
+                        <p class="lead">De ataques afectan pequeñas empresas</p>
+                    </div>
+                </div>
+                <!-- ESTADÍSTICA 2 -->
+                <div class="col-md-3">
+                    <div class="stat-box">
+                        <h3 class="display-4 fw-bold text-warning">$4.45M</h3>
+                        <p class="lead">Costo promedio de una brecha de datos</p>
+                    </div>
+                </div>
+                <!-- ESTADÍSTICA 3 -->
+                <div class="col-md-3">
+                    <div class="stat-box">
+                        <h3 class="display-4 fw-bold text-info">30,000</h3>
+                        <p class="lead">Sitios web hackeados diariamente</p>
+                    </div>
+                </div>
+                <!-- ESTADÍSTICA 4 -->
+                <div class="col-md-3">
+                    <div class="stat-box">
+                        <h3 class="display-4 fw-bold text-success">95%</h3>
+                        <p class="lead">De brechas por error humano</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER (PIE DE PÁGINA)
+         Información de contacto y copyright
+         ======================================== -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-2">
+                <i class="fas fa-shield-alt"></i> 
+                <strong>Creado por Patricio Becar Elissegaray</strong> - Educación para un mundo digital seguro
+            </p>
+            <p class="text-muted mb-0">
+                Proyecto educativo - BootCamp Python | Módulo 2
+            </p>
+        </div>
+    </footer>
+
+    <!-- ========================================
+         SCRIPTS DE JAVASCRIPT
+         Se cargan al final para que la página cargue más rápido
+         ======================================== -->
+    
+    <!-- jQuery: Librería para manipular el DOM fácilmente -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    
+    <!-- Bootstrap JS: Funcionalidad de componentes interactivos -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Nuestro JavaScript personalizado -->
+    <script src="js/main.js"></script>
+</body>
+</html>

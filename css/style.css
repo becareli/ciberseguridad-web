@@ -1,0 +1,587 @@
+/* ========================================
+   ARCHIVO: style.css
+   DESCRIPCIÓN: Estilos personalizados para el sitio de ciberseguridad
+   AUTOR: Proyecto BootCamp Python - Módulo 2
+   ======================================== */
+
+/* ========================================
+   1. VARIABLES CSS (Custom Properties)
+   Como las "constantes" en arquitectura - colores y medidas que usaremos repetidamente
+   ======================================== */
+:root {
+    /* Colores principales del tema */
+    --color-primary: #0056b3;
+    --color-secondary: #6c757d;
+    --color-success: #28a745;
+    --color-danger: #dc3545;
+    --color-warning: #ffc107;
+    --color-info: #17a2b8;
+    --color-dark: #212529;
+    --color-light: #f8f9fa;
+    
+    /* Tipografía */
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    /* Sombras (para dar profundidad a elementos) */
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,0.2);
+    
+    /* Transiciones (para animaciones suaves) */
+    --transition: all 0.3s ease;
+}
+
+/* ========================================
+   2. ESTILOS GENERALES DEL BODY
+   Configuración base de toda la página
+   ======================================== */
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: #333;
+    padding-top: 70px;
+    overflow-x: hidden;
+}
+
+/* Ajuste para que el scroll sea suave al hacer clic en enlaces ancla */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ========================================
+   3. BARRA DE NAVEGACIÓN (NAVBAR)
+   Estilos personalizados para el menú superior
+   ======================================== */
+.navbar {
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+/* Efecto al hacer hover sobre los enlaces del menú */
+.navbar-nav .nav-link {
+    transition: var(--transition);
+    padding: 8px 16px !important;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Estilo para el link activo (página actual) */
+.navbar-nav .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+
+/* Icono de la marca (logo) */
+.navbar-brand i {
+    margin-right: 8px;
+    animation: pulse 2s infinite;
+}
+
+/* ========================================
+   4. SECCIÓN HERO (Imagen destacada de inicio)
+   La "fachada principal" de nuestro sitio
+   ======================================== */
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de partículas en el fondo (opcional decorativo) */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: 100px 100px;
+    opacity: 0.3;
+}
+
+/* Animación de aparición gradual del título */
+.animate-fade-in {
+    animation: fadeInUp 1s ease-out;
+}
+
+/* ========================================
+   5. TARJETAS (CARDS)
+   Estilos para las tarjetas de información
+   ======================================== */
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+/* Efecto hover en tarjetas: se elevan y agrandan ligeramente */
+.hover-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Caja de iconos dentro de las tarjetas */
+.icon-box {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--color-light);
+}
+
+/* ========================================
+   6. TARJETAS DE AMENAZAS (página amenazas.html)
+   Estilos específicos para las tarjetas de ataques cibernéticos
+   ======================================== */
+.threat-card {
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+/* Al pasar el mouse, la tarjeta se eleva y cambia de borde */
+.threat-card:hover {
+    transform: translateY(-8px);
+    border-color: currentColor;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Encabezados de las tarjetas de amenazas */
+.threat-card .card-header {
+    padding: 20px;
+    border-bottom: none;
+}
+
+/* Iconos grandes dentro de las tarjetas de amenazas */
+.threat-card .card-header i {
+    display: block;
+    margin-bottom: 10px;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* ========================================
+   7. ENCABEZADOS DE PÁGINA
+   Banner superior de cada sección
+   ======================================== */
+.page-header {
+    padding: 100px 0 50px 0;
+    margin-bottom: 0;
+}
+
+/* ========================================
+   8. ESTADÍSTICAS (sección de números impactantes)
+   ======================================== */
+.stat-box {
+    padding: 30px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: var(--transition);
+}
+
+.stat-box:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+
+/* Los números grandes de las estadísticas */
+.stat-box h3 {
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+/* ========================================
+   9. ACORDEÓN (Collapse de Bootstrap)
+   Para mostrar/ocultar información
+   ======================================== */
+.accordion-button {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 1.25rem;
+}
+
+/* Quita el icono de flecha por defecto y agrega el nuestro */
+.accordion-button:not(.collapsed) {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
+/* Efecto al pasar el mouse sobre el acordeón */
+.accordion-item {
+    margin-bottom: 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 10px !important;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.accordion-item:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateX(5px);
+}
+
+/* ========================================
+   10. CARRUSEL (Carousel de Bootstrap)
+   Para los casos reales de ataques
+   ======================================== */
+.carousel-item {
+    padding: 20px;
+    min-height: 400px;
+}
+
+/* Controles del carrusel (flechas) */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+/* Indicadores (puntitos) del carrusel */
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+/* ========================================
+   11. MODALES (Ventanas emergentes)
+   ======================================== */
+.modal-content {
+    border-radius: 15px;
+    border: none;
+    box-shadow: var(--shadow-lg);
+}
+
+.modal-header {
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    padding: 1.5rem;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+/* ========================================
+   12. FORMULARIOS
+   Estilos para inputs, selects, textareas
+   ======================================== */
+.form-control,
+.form-select {
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    padding: 12px 15px;
+    transition: var(--transition);
+}
+
+/* Efecto al enfocar (hacer clic) en un campo */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 0.2rem rgba(0, 86, 179, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Campos inválidos (validación) */
+.form-control.is-invalid,
+.form-select.is-invalid {
+    border-color: var(--color-danger);
+}
+
+/* Checkboxes personalizados */
+.form-check-input {
+    width: 1.3em;
+    height: 1.3em;
+    cursor: pointer;
+}
+
+.form-check-input:checked {
+    background-color: var(--color-success);
+    border-color: var(--color-success);
+}
+
+/* ========================================
+   13. BOTONES PERSONALIZADOS
+   Mejoras visuales para los botones
+   ======================================== */
+.btn {
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: var(--transition);
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de elevación al pasar el mouse */
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Efecto al hacer clic (presionar) */
+.btn:active {
+    transform: translateY(-1px);
+}
+
+/* Botones grandes */
+.btn-lg {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+}
+
+/* ========================================
+   14. ALERTAS PERSONALIZADAS
+   Para mensajes de éxito, error, advertencia
+   ======================================== */
+.alert {
+    border-radius: 10px;
+    border: none;
+    padding: 1.25rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.alert i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* ========================================
+   15. FOOTER (Pie de página)
+   ======================================== */
+footer {
+    margin-top: 50px;
+    border-top: 3px solid var(--color-primary);
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+/* ========================================
+   16. ANIMACIONES KEYFRAMES
+   Definición de animaciones personalizadas
+   ======================================== */
+
+/* Animación de aparición desde abajo */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de pulso (para el icono del logo) */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Animación de flotación (para iconos) */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Animación de rotación */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ========================================
+   17. UTILIDADES PERSONALIZADAS
+   Clases reutilizables para espaciado, colores, etc.
+   ======================================== */
+
+/* Contenedor con ancho máximo y centrado */
+.container-custom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Espaciado vertical */
+.py-custom {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* Texto con degradado */
+.text-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Sombra de texto */
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* ========================================
+   18. RESPONSIVE DESIGN (Media Queries)
+   Adaptación para diferentes tamaños de pantalla
+   ======================================== */
+
+/* TABLETS (pantallas medianas) */
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+    
+    .hero-section {
+        min-height: 80vh;
+        padding: 40px 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem !important;
+    }
+    
+    .page-header {
+        padding: 80px 0 30px 0;
+    }
+    
+    /* Estadísticas en columna en móviles */
+    .stat-box {
+        margin-bottom: 20px;
+    }
+    
+    /* Ajuste de tarjetas */
+    .card {
+        margin-bottom: 20px;
+    }
+    
+    /* Botones más pequeños */
+    .btn-lg {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+/* MÓVILES (pantallas pequeñas) */
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 2rem !important;
+    }
+    
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+    
+    /* Iconos más pequeños en móvil */
+    .hero-section i {
+        font-size: 8rem !important;
+    }
+    
+    /* Ajuste del acordeón */
+    .accordion-button {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    
+    /* Modal ocupa casi toda la pantalla */
+    .modal-dialog {
+        margin: 10px;
+    }
+    
+    /* Formularios más compactos */
+    .form-control,
+    .form-select {
+        padding: 10px 12px;
+        font-size: 0.95rem;
+    }
+}
+
+/* PANTALLAS GRANDES (Desktop) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    /* Efectos más pronunciados en desktop */
+    .hover-card:hover {
+        transform: translateY(-15px) scale(1.03);
+    }
+}
+
+/* ========================================
+   19. ACCESIBILIDAD
+   Mejoras para usuarios con discapacidades
+   ======================================== */
+
+/* Mejora el contraste para lectores de pantalla */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+/* Resalta el elemento enfocado con teclado */
+*:focus {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* ========================================
+   20. IMPRESIÓN
+   Estilos para cuando se imprime la página
+   ======================================== */
+@media print {
+    /* Oculta elementos innecesarios al imprimir */
+    .navbar,
+    footer,
+    .btn,
+    .modal {
+        display: none !important;
+    }
+    
+    /* Ajusta colores para impresión */
+    body {
+        color: #000;
+        background: #fff;
+    }
+    
+    /* Evita saltos de página en elementos */
+    .card,
+    .accordion-item {
+        page-break-inside: avoid;
+    }
+}
+
+/* ========================================
+   FIN DEL ARCHIVO CSS
+   ======================================== */
